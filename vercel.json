@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/send-message.py",
+      "src": "api/send-message/index.py",
       "use": "@vercel/python"
     },
     {

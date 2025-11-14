@@ -342,6 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // In the contact form section, replace the fetch URL with:
 // Change the fetch URL to:
+
 const response = await fetch('/api/send-message', {
     method: 'POST',
     headers: {
