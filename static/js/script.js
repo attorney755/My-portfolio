@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Stock Management System",
             description: "A comprehensive inventory management solution for Amasumo C, LTD that streamlines stock tracking, order processing, and reporting.",
             longDescription: "This system was developed to address the specific inventory management needs of Amasumo C, LTD. It provides real-time tracking of stock levels, automated reordering, sales analytics, and comprehensive reporting features. The system has improved inventory accuracy by 95% and reduced stockouts by 80%.",
-            technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "jQuery"],
+            technologies: ["PHP", "MySQL", "JAVASCRIPT", "CODEIGNITER", "JQUERY", "HTML5", "CSS3"],
             features: [
                 "Real-time inventory tracking",
                 "Automated reorder points",
@@ -85,38 +85,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Barcode scanning integration"
             ],
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60"
+                "../static/images/am2.png",
+                "../static/images/am3.png",
+                "../static/images/am4.png"
             ],
-            demoLink: "#",
-            githubLink: "#"
+            demoLink: "../amasumo.html",
+            githubLink: "https://github.com/attorney755/Stock_management_system"
         },
         2: {
             title: "Think Tank Website",
             description: "A professional website for a research organization featuring publications, events, and team information.",
-            longDescription: "This website was designed to showcase the research work, publications, and events of a prominent think tank organization. It features a clean, professional design that emphasizes content and facilitates easy navigation. The site includes a custom content management system for easy updates.",
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Material-UI"],
+            longDescription: "A professional website for our final think-tank project, where you can find our mission, problem statement and solution, and E-lab challenges.",
+            technologies: ["HTML5", "CSS3", "JAVASCRIPT"],
             features: [
-                "Responsive design optimized for all devices",
-                "Custom CMS for content management",
-                "Publication database with advanced filtering",
-                "Event calendar and registration system",
+                "Responsive design for all devices",
+                "Mission & Vision",
+                "Problem statement & Solution",
+                " E-lab Challenges",
                 "Team member profiles with expertise areas"
             ],
             images: [
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60"
+               "../static/images/peaky2.png",
+               "../static/images/peaky3.png",
+                "../static/images/peaky4.png"
             ],
-            demoLink: "#",
-            githubLink: "#"
+            demoLink: "https://alupeakyblinders.netlify.app/",
+            githubLink: "https://github.com/attorney755" 
         },
         3: {
             title: "Urban Mobility Data Explorer",
             description: "Interactive dashboard for analyzing taxi trip data with visualizations and filtering options.",
             longDescription: "This data visualization platform was developed to help urban planners and transportation analysts understand taxi trip patterns in major cities. The dashboard processes millions of data points to provide insights into travel patterns, peak hours, popular routes, and fare analysis.",
-            technologies: ["Python", "D3.js", "Flask", "PostgreSQL", "Leaflet"],
+            technologies: ["PYTHON3", "JAVASCRIPT", "FLASK 2.3.2", "MYSQL DB", "HTML5", "CSS3"],
             features: [
                 "Interactive map visualization of taxi trips",
                 "Time-based filtering and analysis",
@@ -125,53 +125,51 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Export functionality for reports"
             ],
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60"
+                "../static/images/urb2.png",
+                "../static/images/urb3.png",
+                "../static/images/urb4.png"
             ],
-            demoLink: "#",
-            githubLink: "#"
+            demoLink: "https://github.com/attorney755/Urban-Mobility-Data-Explorer",
+            githubLink: "https://github.com/attorney755/Urban-Mobility-Data-Explorer"
         },
         4: {
             title: "Country Information App",
             description: "Fetches and displays country data using the RestCountries API with charts and detailed information.",
             longDescription: "This educational application provides comprehensive information about countries worldwide. Users can search for any country and view detailed information including population statistics, geographic data, economic indicators, and cultural facts. The app features interactive charts and maps for better data visualization.",
-            technologies: ["React", "Rest API", "CSS3", "Chart.js", "Axios"],
+            technologies: ["DOCKER", "REST API", "CSS3", "HTML5", "JAVASCRIPT", ""],
             features: [
                 "Search and filter countries by various criteria",
                 "Detailed country profiles with multiple data points",
-                "Interactive charts for population, area, and other metrics",
-                "Comparison feature between countries",
-                "Bookmark favorite countries"
+                "Interactive population, area, and other metrics",
+                "Responsive design for mobile and desktop",
+                "Integration with RestCountries API for real-time data"
             ],
             images: [
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60"
+                "../static/images/cou2.png",
+                "../static/images/cou3.png",
+                "../static/images/cou4.png"
             ],
-            demoLink: "#",
-            githubLink: "#"
+            demoLink: "https://github.com/attorney755/Urban-Mobility-Data-Explorer",
+            githubLink: "https://github.com/attorney755/Urban-Mobility-Data-Explorer"
         },
         5: {
             title: "Hills Market Rwanda",
-            description: "A direct buyer-seller marketplace platform for agricultural products in Rwanda.",
-            longDescription: "Hills Market Rwanda is an e-commerce platform designed to connect farmers directly with buyers, eliminating middlemen and ensuring fair prices. The platform includes features for product listing, secure payments, order tracking, and delivery coordination. It has helped hundreds of farmers increase their income by 30% on average.",
-            technologies: ["MERN Stack", "Payment Integration", "Cloud Storage", "Redux", "JWT"],
+            description: "A direct buyer-seller marketplace platform for  products in Rwanda.",
+            longDescription: "Hills Market Rwanda is an e-commerce platform designed to connect farmers directly with buyers, eliminating middlemen and ensuring fair prices. The platform includes features for product listing. It has helped hundreds of sellers increase their income by 30% on average.",
+            technologies: ["FLASK", "PYTHON3", "CLOUD STORAGE", "HTML5", "CSS3", "JAVASCRIPT"],
             features: [
                 "User authentication and profile management",
-                "Product listing and catalog management",
-                "Secure payment processing",
-                "Order tracking and delivery coordination",
-                "Review and rating system",
+                "Product listing and search functionality",
+                "Connects buyers directly with sellers",               
                 "Mobile-responsive design"
             ],
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.1&auto=format&fit=crop&w=500&q=60"
+                "../static/images/hill2.png",
+                "../static/images/hill3.png",
+                "../static/images/hill4.png"
             ],
-            demoLink: "#",
-            githubLink: "#"
+            demoLink: "https://hills-market-rwanda.duckdns.org/",
+            githubLink: "https://github.com/attorney755/Hills-Market"
         }
     };
     
