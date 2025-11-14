@@ -301,79 +301,75 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Contact form validation and submission
-    const contactForm = document.querySelector('.contact__form');
+   const contactForm = document.querySelector('.contact__form');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const name = this.querySelector('input[type="text"]').value.trim();
+        const email = this.querySelector('input[type="email"]').value.trim();
+        const message = this.querySelector('textarea').value.trim();
+        
+        // Simple validation
+        if (!name || !email || !message) {
+            showAlert('Please fill in all fields.', 'error');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showAlert('Please enter a valid email address.', 'error');
+            return;
+        }
+        
+        if (message.length < 10) {
+            showAlert('Message must be at least 10 characters long.', 'error');
+            return;
+        }
+        
+        // Show loading state
+        const submitButton = this.querySelector('.form__button');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        try {
+            // USE EMAILJS INSTEAD OF FETCH
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                reply_to: email
+            };
             
-            const name = this.querySelector('input[type="text"]').value.trim();
-            const email = this.querySelector('input[type="email"]').value.trim();
-            const message = this.querySelector('textarea').value.trim();
+            // REPLACE THESE WITH YOUR ACTUAL IDs:
+            const serviceID = 'service_mz7io2y';           // Your service name in EmailJS
+            const templateID = 'template_vn1m5c2';   // Your template ID from EmailJS
             
-            // Simple validation
-            if (!name || !email || !message) {
-                showAlert('Please fill in all fields.', 'error');
-                return;
+            console.log('Sending email...', { serviceID, templateID, templateParams });
+            
+            const response = await emailjs.send(serviceID, templateID, templateParams);
+            
+            console.log('Email sent successfully:', response);
+            
+            if (response.status === 200) {
+                showAlert('Thank you for your message! I will get back to you soon.', 'success');
+                this.reset();
+            } else {
+                showAlert('Failed to send message. Please try again later.', 'error');
             }
             
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showAlert('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            if (message.length < 10) {
-                showAlert('Message must be at least 10 characters long.', 'error');
-                return;
-            }
-            
-            // Show loading state
-            const submitButton = this.querySelector('.form__button');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            try {
-                // Smart URL detection - works with both Flask server and direct HTML
-                const baseURL = window.location.protocol === 'file:' ? 
-                    'http://localhost:5000' : '';
-                
-                // In the contact form section, replace the fetch URL with:
-// Change the fetch URL to:
-
-const response = await fetch('/api/send-message', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        name: name,
-        email: email,
-        message: message
-    })
-});
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    showAlert(data.message, 'success');
-                    this.reset();
-                } else {
-                    showAlert(data.message, 'error');
-                }
-                
-            } catch (error) {
-                console.error('Error:', error);
-                showAlert('Failed to send message. Please check if the server is running.', 'error');
-            } finally {
-                // Reset button state
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }
-        });
-    }
+        } catch (error) {
+            console.error('EmailJS error details:', error);
+            showAlert('Failed to send message. Please try again later.', 'error');
+        } finally {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    });
+}
 
     // Alert function
     function showAlert(message, type) {
