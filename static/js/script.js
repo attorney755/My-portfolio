@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "../static/images/am3.png",
                 "../static/images/am4.png"
             ],
-            demoLink: "../amasumo.html",
+            demoLink: "https://amasumo-co-ltd.netlify.app/",
             githubLink: "https://github.com/attorney755/Stock_management_system"
         },
         2: {
